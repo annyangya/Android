@@ -315,6 +315,50 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+##### style设置
+1. pop_in_item
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <translate
+        android:duration="@android:integer/config_shortAnimTime"
+        android:fromXDelta="0"
+        android:fromYDelta="100%"
+        android:toXDelta="0"
+        android:toYDelta="0"
+        />
+</set>
+```
+2. pop_out_item
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <translate
+        android:duration="@android:integer/config_shortAnimTime"
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="0"
+        android:toYDelta="100%"
+        />
+</set>
+```
+
+3. styles
+```xml
+<!--自定义Dialog-->
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="Theme_dialog" parent="android:style/Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+```
+
 
 
 
